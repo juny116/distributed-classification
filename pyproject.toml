@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distributed-classification"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["distributed_classification*"]
+
+[project.optional-dependencies]
+runtime = ["omegaconf", "torch", "deepspeed", "numpy", "datasets<3", "transformers<5", "tqdm"]
